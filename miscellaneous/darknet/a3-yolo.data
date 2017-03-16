@@ -1,0 +1,5 @@
+classes = 40
+train   = /home/jana/git/COMP551_A3/miscellaneous/yolo/train.txt
+valid   = /home/jana/git/COMP551_A3/miscellaneous/yolo/train.txt
+names   = /home/jana/git/COMP551_A3/miscellaneous/yolo/yolo_a3.names
+backup  = backup
