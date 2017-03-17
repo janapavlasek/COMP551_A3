@@ -1,0 +1,150 @@
+{
+    "im_size": 64,
+    "num_channels": 3,
+    "num_classes": 40,
+
+    "layers": [
+
+        {
+            "type": "parallel_conv",
+
+            "parallel_layers": [
+                [
+                    {
+                        "type": "conv",
+
+                        "filter_size": 1,
+                        "num_filters": 32,
+                        "max_pool": true,
+                        "normalize": true
+                    },
+
+                    {
+                        "type": "conv",
+
+                        "filter_size": 1,
+                        "num_filters": 64,
+                        "max_pool": true,
+                        "normalize": true
+                    }
+                ],
+
+                [
+                    {
+                        "type": "conv",
+
+                        "filter_size": 3,
+                        "num_filters": 32,
+                        "max_pool": false,
+                        "normalize": true
+                    },
+
+                    {
+                        "type": "conv",
+
+                        "filter_size": 3,
+                        "num_filters": 32,
+                        "max_pool": true,
+                        "normalize": true
+                    },
+
+                    {
+                        "type": "conv",
+
+                        "filter_size": 3,
+                        "num_filters": 48,
+                        "max_pool": false,
+                        "normalize": true
+                    },
+
+                    {
+                        "type": "conv",
+
+                        "filter_size": 3,
+                        "num_filters": 54,
+                        "max_pool": true,
+                        "normalize": true
+                    }
+                ],
+
+                [
+                    {
+                        "type": "conv",
+
+                        "filter_size": 5,
+                        "num_filters": 24,
+                        "max_pool": false,
+                        "normalize": true
+                    },
+
+                    {
+                        "type": "conv",
+
+                        "filter_size": 5,
+                        "num_filters": 24,
+                        "max_pool": true,
+                        "normalize": true
+                    },
+
+                    {
+                        "type": "conv",
+
+                        "filter_size": 5,
+                        "num_filters": 32,
+                        "max_pool": false,
+                        "normalize": true
+                    }
+                ],
+
+                [
+                    {
+                        "type": "conv",
+
+                        "filter_size": 7,
+                        "num_filters": 10,
+                        "max_pool": false,
+                        "normalize": true
+                    },
+
+                    {
+                        "type": "conv",
+
+                        "filter_size": 7,
+                        "num_filters": 16,
+                        "max_pool": true,
+                        "normalize": true
+                    }
+                ]
+            ]
+        },
+
+        {
+            "type": "fully_connected",
+
+            "num_outputs": 514,
+            "use_relu": true,
+            "dropout": true
+        },
+
+        {
+            "type": "fully_connected",
+
+            "num_outputs": 514,
+            "use_relu": true,
+            "dropout": true
+        },
+
+        {
+            "type": "fully_connected",
+
+            "num_outputs": 128,
+            "use_relu": true,
+            "dropout": true
+        },
+
+        {
+            "type": "prediction_layer"
+        }
+
+    ]
+}

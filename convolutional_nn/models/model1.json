@@ -1,0 +1,65 @@
+{
+    "im_size": 64,
+    "num_channels": 3,
+    "num_classes": 40,
+
+    "layers": [
+
+        {
+            "type": "conv",
+
+            "filter_size": 5,
+            "num_filters": 48,
+            "max_pool": true,
+            "normalize": false
+        },
+
+        {
+            "type": "conv",
+
+            "filter_size": 5,
+            "num_filters": 128,
+            "max_pool": true,
+            "normalize": false
+        },
+
+        {
+            "type": "conv",
+
+            "filter_size": 3,
+            "num_filters": 192,
+            "max_pool": true,
+            "normalize": false
+        },
+
+        {
+            "type": "conv",
+
+            "filter_size": 3,
+            "num_filters": 192,
+            "max_pool": true,
+            "normalize": false
+        },
+
+        {
+            "type": "fully_connected",
+
+            "num_outputs": 128,
+            "use_relu": true,
+            "dropout": true
+        },
+
+        {
+            "type": "fully_connected",
+
+            "num_outputs": 128,
+            "use_relu": true,
+            "dropout": true
+        },
+
+        {
+            "type": "prediction_layer"
+        }
+
+    ]
+}
