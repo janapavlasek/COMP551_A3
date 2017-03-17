@@ -1,5 +1,8 @@
 # Neural Network
-Example:
+
+This directory contains a custom implementation of a feed forward neural network.
+
+Usage example:
 
 model = Model()
 

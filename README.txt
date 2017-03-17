@@ -7,4 +7,4 @@ This is the code for the third assignment for Applied Machine Learning. The task
   - A CNN implementation using Tensorflow
   - Darknet19, a more complex CNN architecture.
 
-Please see the READMEs located in the individual directories for more information and instructions on how to run the code.
+Please see the READMEs located in the individual directories for more information and instructions on how to run the code. You will need to download the provided imade data and place it in the "data" directory.
