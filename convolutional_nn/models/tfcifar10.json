@@ -1,0 +1,47 @@
+{
+    "im_size": 64,
+    "num_channels": 3,
+    "num_classes": 40,
+
+    "layers": [
+
+        {
+            "type": "conv",
+
+            "filter_size": 5,
+            "num_filters": 64,
+            "max_pool": true,
+            "normalize": true
+        },
+
+        {
+            "type": "conv",
+
+            "filter_size": 5,
+            "num_filters": 64,
+            "max_pool": true,
+            "normalize": true
+        },
+
+        {
+            "type": "fully_connected",
+
+            "num_outputs": 384,
+            "use_relu": true,
+            "dropout": true
+        },
+
+        {
+            "type": "fully_connected",
+
+            "num_outputs": 384,
+            "use_relu": true,
+            "dropout": true
+        },
+
+        {
+            "type": "prediction_layer"
+        }
+
+    ]
+}
